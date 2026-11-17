@@ -1,0 +1,106 @@
+/* ── Chart card glass shell ── */
+.chart-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--trans-mid), box-shadow var(--trans-mid);
+}
+
+.chart-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── Header ── */
+.chart-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.chart-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.chart-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  background: var(--bg-hover);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--glass-border);
+}
+
+/* ── Month selector ── */
+.month-select {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 0.38rem 0.75rem;
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  background: var(--bg-hover);
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--trans-fast);
+}
+
+.month-select:focus {
+  border-color: var(--border-focus);
+}
+
+/* ── Custom chart tooltip ── */
+.chart-tooltip {
+  background: var(--bg-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1rem;
+  font-size: 0.84rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  box-shadow: var(--shadow-md);
+  color: var(--text-primary);
+}
+
+.chart-tooltip strong {
+  color: var(--accent-blue);
+  font-size: 0.8rem;
+}
+
+/* ── Empty state ── */
+.chart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  gap: 0.75rem;
+  color: var(--text-muted);
+}
+
+.chart-empty span { font-size: 2.8rem; opacity: 0.4; }
+.chart-empty p { margin: 0; font-size: 0.88rem; font-weight: 500; }
+
+/* ── Bar chart legend note ── */
+.bar-legend-note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin: 0.75rem 0 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}

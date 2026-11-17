@@ -1,0 +1,7 @@
+/* MonthlyBarChart shares all styles from CategoryPieChart.css */
+/* Only bar-chart-specific overrides below */
+
+.bar-legend-note span {
+  display: inline-block;
+  border-radius: 3px;
+}

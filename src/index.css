@@ -1,0 +1,117 @@
+/* ══════════════════════════════════════════════════════
+   FINTECH DESIGN TOKENS  –  dark (default) + light theme
+   ══════════════════════════════════════════════════════ */
+
+/* ── Dark theme (default) ── */
+:root {
+  /* Backgrounds */
+  --bg-base:        #080e21;
+  --bg-surface:     #0f1a35;
+  --bg-raised:      #162040;
+  --bg-hover:       #1d2a52;
+  --bg-input:       #111c38;
+
+  /* Borders */
+  --border:         rgba(99, 155, 255, 0.12);
+  --border-focus:   rgba(99, 155, 255, 0.5);
+
+  /* Brand palette */
+  --accent-blue:    #4f8ef7;
+  --accent-purple:  #9b6dff;
+  --accent-cyan:    #22d3ee;
+  --accent-green:   #10b981;
+  --accent-red:     #f43f5e;
+  --accent-amber:   #f59e0b;
+
+  /* Gradients */
+  --grad-primary:   linear-gradient(135deg, #2563eb, #7c3aed);
+  --grad-green:     linear-gradient(135deg, #064e3b, #10b981);
+  --grad-red:       linear-gradient(135deg, #7f1d1d, #f43f5e);
+  --grad-card1:     linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  --grad-card2:     linear-gradient(135deg, #1e1b4b 0%, #7c3aed 100%);
+  --grad-card3:     linear-gradient(135deg, #064e3b 0%, #10b981 100%);
+
+  /* Text */
+  --text-primary:   #e8eeff;
+  --text-secondary: #8ba3cc;
+  --text-muted:     #4a6080;
+  --text-inverse:   #080e21;
+
+  /* Glass effect */
+  --glass-bg:       rgba(15, 26, 53, 0.75);
+  --glass-blur:     blur(16px);
+  --glass-border:   rgba(99, 155, 255, 0.14);
+
+  /* Shadows */
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.35);
+  --shadow-md:      0 8px 32px rgba(0,0,0,0.45);
+  --shadow-lg:      0 20px 60px rgba(0,0,0,0.6);
+  --shadow-glow:    0 0 24px rgba(79,142,247,0.18);
+
+  /* Radius */
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-pill: 50px;
+
+  /* Transitions */
+  --trans-fast:  0.15s ease;
+  --trans-mid:   0.25s ease;
+}
+
+/* ── Light theme ── */
+[data-theme="light"] {
+  --bg-base:        #f0f4ff;
+  --bg-surface:     #ffffff;
+  --bg-raised:      #f8faff;
+  --bg-hover:       #eef2ff;
+  --bg-input:       #f1f5ff;
+
+  --border:         rgba(37, 99, 235, 0.12);
+  --border-focus:   rgba(37, 99, 235, 0.45);
+
+  --glass-bg:       rgba(255, 255, 255, 0.82);
+  --glass-blur:     blur(12px);
+  --glass-border:   rgba(37, 99, 235, 0.12);
+
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
+  --text-inverse:   #ffffff;
+
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md:      0 8px 32px rgba(0,0,0,0.10);
+  --shadow-lg:      0 20px 60px rgba(0,0,0,0.14);
+  --shadow-glow:    0 0 20px rgba(37, 99, 235, 0.10);
+}
+
+/* ══════════════════════════════════════════════════════
+   GLOBAL RESET + BASE
+   ══════════════════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color var(--trans-mid), color var(--trans-mid);
+}
+
+button  { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
+a { color: inherit; text-decoration: none; }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
